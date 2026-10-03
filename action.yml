@@ -55,7 +55,7 @@ runs:
 
     - name: Check out EdgeTX Lua sources
       if: steps.ref.outputs.built != 'true' && steps.cache.outputs.cache-hit != 'true'
-      uses: actions/checkout@v7
+      uses: actions/checkout@v7.0.1
       with:
         repository: ${{ inputs.edgetx-repo }}
         ref: ${{ steps.ref.outputs.sha }}
