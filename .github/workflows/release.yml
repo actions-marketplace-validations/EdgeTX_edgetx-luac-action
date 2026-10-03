@@ -33,7 +33,7 @@ jobs:
         shell: bash
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
 
       - name: Read the pinned EdgeTX ref
         id: ref
@@ -46,7 +46,7 @@ jobs:
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
 
       - name: Check out EdgeTX Lua sources
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
         with:
           repository: EdgeTX/edgetx
           ref: ${{ steps.ref.outputs.sha }}
@@ -119,7 +119,7 @@ jobs:
       contents: write
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
 
       - name: Download binaries
         uses: actions/download-artifact@v8
